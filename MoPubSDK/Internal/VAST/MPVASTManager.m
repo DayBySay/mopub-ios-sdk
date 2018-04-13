@@ -54,6 +54,8 @@ static NSString * const kMPVASTManagerErrorDomain = @"com.mopub.MPVASTManager";
         return;
     }
 
+    NSLog(@"VAST %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    
     NSError *XMLParserError = nil;
     MPXMLParser *parser = [[MPXMLParser alloc] init];
     NSDictionary *dictionary = [parser dictionaryWithData:data error:&XMLParserError];
